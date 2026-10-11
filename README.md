@@ -1,4 +1,4 @@
-# Thing-sona — Interactive prototype v0.3.2
+# Thing-sona — Interactive prototype v0.3.7
 
 A static, bilingual (English / 简体中文) prototype of Peng Lu’s Thing-sona tool.
 
@@ -75,3 +75,25 @@ Opening the custom-card / emoji dialog locks background scrolling. The dialog an
 ## v0.3.2
 
 Every page load starts in English. Switching language localises the built-in writing example, project selector, form text, card-type options and print heading. Known bilingual example values from earlier versions are migrated when displayed. Participant-authored or edited text is preserved verbatim, not automatically translated.
+
+## v0.3.3
+
+- The phrase “the relations” and its Chinese counterpart use the original pink-red accent; “we experience” retains blue in English.
+- A red-and-blue two-dot SVG favicon and a 180 px touch icon match the header mark.
+- From 701 px upward, the card grid removes its fixed 520 px cap and fills the equal-height library panel. The compact mobile scroller remains unchanged.
+
+## v0.3.4
+
+The relation workspace now determines the Card Library height in one direction. A ResizeObserver and window resize handler recalculate that height whenever the responsive layout changes, so resizing from a narrow single-column board back to a wide two-column board contracts the library again. At 700 px or below the explicit height is removed for the stacked mobile layout.
+
+## v0.3.5
+
+The card removal button now uses a dedicated 1:1 line box and flex centering so the multiplication sign is centred vertically and horizontally inside its circle.
+
+## v0.3.6
+
+Card Library height now follows the whole relation workspace only above 1050 px, where the two relation boards share a row. From 701–1050 px, where the relation boards stack, it follows the first board instead of the combined height of both boards and the reflection area. At 700 px or below, the explicit height is cleared.
+
+## v0.3.7
+
+At intermediate widths, the Card Library follows the selected relation board. Selecting Expected or Experienced moves the library alongside that board and matches its height, while preserving the current card filter and scroll position.
